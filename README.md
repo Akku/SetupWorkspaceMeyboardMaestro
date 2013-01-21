@@ -9,5 +9,5 @@ The control flow is:
 - Position (Home) (XOR) Position (Work)
 - (XOR) --> one of the 4 Position macros 
 
-===== Adapting for your needs =====
+# Adapting for your needs
 You'll have to change your SSID, if you have a second monitor you'll have to check if it has the boundaries that I've used, and of course you should configure your apps and window sizes yourself, but my macros can serve as a starting point.
