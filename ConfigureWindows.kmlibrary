@@ -5,21 +5,15 @@
 	<key>Author</key>
 	<string>Tim Dellas</string>
 	<key>AuthorURL</key>
-	<string>http://www.ithoughts.de/</string>
+	<string>http://www.ithoughts.de</string>
 	<key>CanDragToMacroGroup</key>
 	<true/>
 	<key>Category1</key>
 	<string>Interface Control</string>
 	<key>Category2</key>
-	<string>Windows</string>
+	<string></string>
 	<key>Description</key>
-	<string>A set of macros to setup my work environment. Includes checking wheter I'm connected to my Home or Work network SSID, then checking if a second monitor is attached and then starting / closing apps that I only want to run on Work or at Home. After that, my prefferred window layout gets setup.
-
-The control flow is:
-- At System Wake or Hotkey or Triggered by the ScreenChange Marco
-- Configure Workspace --&gt;
-- Position (Home) || Position (Work)
---&gt; one of the 4 Position macros </string>
+	<string>A set of macros if you want to control your screen layout and have it set the way you like it automatically, when the network SSID changes or monitors are attached or removed.</string>
 	<key>Items</key>
 	<array>
 		<dict>
@@ -32,199 +26,6 @@ The control flow is:
 				<dict>
 					<key>Actions</key>
 					<array>
-						<dict>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>SetVariableToText</string>
-							<key>Text</key>
-							<string>%Screen%2%</string>
-							<key>Variable</key>
-							<string>secondframe</string>
-						</dict>
-						<dict>
-							<key>Conditions</key>
-							<dict>
-								<key>ConditionList</key>
-								<array>
-									<dict>
-										<key>Application</key>
-										<dict>
-											<key>BundleIdentifier</key>
-											<string>com.skype.skype</string>
-											<key>Creator</key>
-											<integer>1397446992</integer>
-											<key>FileType</key>
-											<integer>1095782476</integer>
-											<key>Name</key>
-											<string>Skype.app</string>
-											<key>NewFile</key>
-											<string>/Applications/Skype.app</string>
-										</dict>
-										<key>ApplicationConditionType</key>
-										<string>Running</string>
-										<key>ConditionType</key>
-										<string>Application</string>
-									</dict>
-								</array>
-								<key>ConditionListMatch</key>
-								<string>All</string>
-							</dict>
-							<key>ElseActions</key>
-							<array/>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>IfThenElse</string>
-							<key>ThenActions</key>
-							<array>
-								<dict>
-									<key>Action</key>
-									<string>Quit</string>
-									<key>Application</key>
-									<dict>
-										<key>BundleIdentifier</key>
-										<string>com.skype.skype</string>
-										<key>Creator</key>
-										<integer>1397446992</integer>
-										<key>FileType</key>
-										<integer>1095782476</integer>
-										<key>Name</key>
-										<string>Skype.app</string>
-										<key>NewFile</key>
-										<string>/Applications/Skype.app</string>
-									</dict>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>QuitSpecificApp</string>
-									<key>Target</key>
-									<string>Specific</string>
-								</dict>
-							</array>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
-						</dict>
-						<dict>
-							<key>Conditions</key>
-							<dict>
-								<key>ConditionList</key>
-								<array>
-									<dict>
-										<key>ConditionType</key>
-										<string>Variable</string>
-										<key>Variable</key>
-										<string>secondframe</string>
-										<key>VariableConditionType</key>
-										<string>Is</string>
-										<key>VariableValue</key>
-										<string>0,0,1920,1200</string>
-									</dict>
-								</array>
-								<key>ConditionListMatch</key>
-								<string>All</string>
-							</dict>
-							<key>ElseActions</key>
-							<array>
-								<dict>
-									<key>Count</key>
-									<integer>1</integer>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>ExecuteMacro</string>
-									<key>MacroUID</key>
-									<string>91070407-4E6A-42A5-8BAD-DD34E21C73D3</string>
-									<key>TimeOutAbortsMacro</key>
-									<true/>
-								</dict>
-							</array>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>IfThenElse</string>
-							<key>ThenActions</key>
-							<array>
-								<dict>
-									<key>Count</key>
-									<integer>1</integer>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>ExecuteMacro</string>
-									<key>MacroUID</key>
-									<string>5412DF3C-0D6B-4E6A-90FA-8C08C1E71D05</string>
-									<key>TimeOutAbortsMacro</key>
-									<true/>
-								</dict>
-							</array>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
-						</dict>
-					</array>
-					<key>IsActive</key>
-					<true/>
-					<key>Name</key>
-					<string>Position (Home)</string>
-					<key>Triggers</key>
-					<array/>
-					<key>UID</key>
-					<string>2FCBDEBF-62C1-45D8-9D3C-1478021249C6</string>
-				</dict>
-			</array>
-			<key>Name</key>
-			<string>Screen Positioning</string>
-			<key>UID</key>
-			<string>C591C8C0-CF5A-4C5E-B318-A5BD7DE6CF50</string>
-		</dict>
-		<dict>
-			<key>Activate</key>
-			<string>Normal</string>
-			<key>IsActive</key>
-			<true/>
-			<key>Macros</key>
-			<array>
-				<dict>
-					<key>Actions</key>
-					<array>
-						<dict>
-							<key>Action</key>
-							<string>DisplayBriefly</string>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<false/>
-							<key>MacroActionType</key>
-							<string>InsertText</string>
-							<key>Paste</key>
-							<false/>
-							<key>Text</key>
-							<string>Found one screen @Home</string>
-						</dict>
-						<dict>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>SetVariableToText</string>
-							<key>Text</key>
-							<string>%Screen%2%</string>
-							<key>Variable</key>
-							<string>secondframe</string>
-						</dict>
 						<dict>
 							<key>AlreadyActivatedActionType</key>
 							<string>Normal</string>
@@ -476,78 +277,11 @@ The control flow is:
 							<key>WindowName</key>
 							<string></string>
 						</dict>
-						<dict>
-							<key>Conditions</key>
-							<dict>
-								<key>ConditionList</key>
-								<array>
-									<dict>
-										<key>Application</key>
-										<dict>
-											<key>BundleIdentifier</key>
-											<string>com.parallels.winapp.29cb4ac6cc4eed05606a67cd335a63e7.cf04fb11a2d045989305a73ea0d8d4c7</string>
-											<key>Creator</key>
-											<integer>1061109567</integer>
-											<key>FileType</key>
-											<integer>1095782476</integer>
-											<key>Name</key>
-											<string>TimeSheep.app</string>
-											<key>NewFile</key>
-											<string>/Users/akku/Applications (Parallels)/{cf04fb11-a2d0-4598-9305-a73ea0d8d4c7} Applications.localized/TimeSheep.app</string>
-										</dict>
-										<key>ApplicationConditionType</key>
-										<string>Running</string>
-										<key>ConditionType</key>
-										<string>Application</string>
-									</dict>
-								</array>
-								<key>ConditionListMatch</key>
-								<string>All</string>
-							</dict>
-							<key>ElseActions</key>
-							<array/>
-							<key>IsActive</key>
-							<false/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>IfThenElse</string>
-							<key>ThenActions</key>
-							<array>
-								<dict>
-									<key>Action</key>
-									<string>Quit</string>
-									<key>Application</key>
-									<dict>
-										<key>BundleIdentifier</key>
-										<string>com.parallels.winapp.29cb4ac6cc4eed05606a67cd335a63e7.cf04fb11a2d045989305a73ea0d8d4c7</string>
-										<key>Creator</key>
-										<integer>1061109567</integer>
-										<key>FileType</key>
-										<integer>1095782476</integer>
-										<key>Name</key>
-										<string>TimeSheep.app</string>
-										<key>NewFile</key>
-										<string>/Users/akku/Applications (Parallels)/{cf04fb11-a2d0-4598-9305-a73ea0d8d4c7} Applications.localized/TimeSheep.app</string>
-									</dict>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>QuitSpecificApp</string>
-									<key>Target</key>
-									<string>Specific</string>
-								</dict>
-							</array>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
-						</dict>
 					</array>
 					<key>IsActive</key>
 					<true/>
 					<key>Name</key>
-					<string>Position with One Screen (Home)</string>
+					<string>Position Windows on One Screen @Home</string>
 					<key>Triggers</key>
 					<array/>
 					<key>UID</key>
@@ -569,18 +303,6 @@ The control flow is:
 				<dict>
 					<key>Actions</key>
 					<array>
-						<dict>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>SetVariableToText</string>
-							<key>Text</key>
-							<string>%Screen%2%</string>
-							<key>Variable</key>
-							<string>secondframe</string>
-						</dict>
 						<dict>
 							<key>AlreadyActivatedActionType</key>
 							<string>Normal</string>
@@ -659,93 +381,6 @@ The control flow is:
 							<string>2</string>
 							<key>WindowName</key>
 							<string></string>
-						</dict>
-						<dict>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>SetVariableToText</string>
-							<key>Text</key>
-							<string>%ShortTime%</string>
-							<key>Variable</key>
-							<string>TimeNow</string>
-						</dict>
-						<dict>
-							<key>Conditions</key>
-							<dict>
-								<key>ConditionList</key>
-								<array>
-									<dict>
-										<key>ConditionType</key>
-										<string>Variable</string>
-										<key>Variable</key>
-										<string>checkedOTRS</string>
-										<key>VariableConditionType</key>
-										<string>IsNot</string>
-										<key>VariableValue</key>
-										<string>1</string>
-									</dict>
-								</array>
-								<key>ConditionListMatch</key>
-								<string>All</string>
-							</dict>
-							<key>ElseActions</key>
-							<array/>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>IfThenElse</string>
-							<key>ThenActions</key>
-							<array>
-								<dict>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>SetVariableToText</string>
-									<key>Text</key>
-									<string>1</string>
-									<key>Variable</key>
-									<string>checkedOTRS</string>
-								</dict>
-								<dict>
-									<key>Application</key>
-									<dict/>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDefaultApplication</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>OpenURL</string>
-									<key>TimeOutAbortsMacro</key>
-									<true/>
-									<key>URL</key>
-									<string>http://abelssoft.de/otrs/index.pl</string>
-								</dict>
-								<dict>
-									<key>Action</key>
-									<string>DisplayBriefly</string>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>InsertText</string>
-									<key>Paste</key>
-									<false/>
-									<key>Text</key>
-									<string>You have not checked OTRS today</string>
-								</dict>
-							</array>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
 						</dict>
 						<dict>
 							<key>AlreadyActivatedActionType</key>
@@ -841,83 +476,125 @@ The control flow is:
 							<string></string>
 						</dict>
 						<dict>
-							<key>AlreadyActivatedActionType</key>
-							<string>Normal</string>
-							<key>Application</key>
+							<key>Conditions</key>
 							<dict>
-								<key>BundleIdentifier</key>
-								<string>com.tapbots.TweetbotMac</string>
-								<key>Creator</key>
-								<integer>1061109567</integer>
-								<key>FileType</key>
-								<integer>1095782476</integer>
-								<key>Name</key>
-								<string>Tweetbot.app</string>
-								<key>NewFile</key>
-								<string>/Applications/Tweetbot.app</string>
+								<key>ConditionList</key>
+								<array>
+									<dict>
+										<key>Application</key>
+										<dict>
+											<key>BundleIdentifier</key>
+											<string>com.tapbots.TweetbotMac</string>
+											<key>Creator</key>
+											<integer>1061109567</integer>
+											<key>FileType</key>
+											<integer>1095782476</integer>
+											<key>Name</key>
+											<string>Tweetbot.app</string>
+											<key>NewFile</key>
+											<string>/Applications/Tweetbot.app</string>
+										</dict>
+										<key>ApplicationConditionType</key>
+										<string>Running</string>
+										<key>ConditionType</key>
+										<string>Application</string>
+									</dict>
+								</array>
+								<key>ConditionListMatch</key>
+								<string>All</string>
 							</dict>
+							<key>ElseActions</key>
+							<array/>
 							<key>IsActive</key>
 							<true/>
 							<key>IsDisclosed</key>
 							<true/>
 							<key>MacroActionType</key>
-							<string>ActivateApplication</string>
-							<key>ReopenWindows</key>
-							<true/>
+							<string>IfThenElse</string>
+							<key>ThenActions</key>
+							<array>
+								<dict>
+									<key>AlreadyActivatedActionType</key>
+									<string>Normal</string>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.tapbots.TweetbotMac</string>
+										<key>Creator</key>
+										<integer>1061109567</integer>
+										<key>FileType</key>
+										<integer>1095782476</integer>
+										<key>Name</key>
+										<string>Tweetbot.app</string>
+										<key>NewFile</key>
+										<string>/Applications/Tweetbot.app</string>
+									</dict>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>ActivateApplication</string>
+									<key>ReopenWindows</key>
+									<true/>
+									<key>TimeOutAbortsMacro</key>
+									<true/>
+								</dict>
+								<dict>
+									<key>Action</key>
+									<string>MoveWindowTo</string>
+									<key>Horizontal</key>
+									<integer>1504</integer>
+									<key>HorizontalExpression</key>
+									<string>1504</string>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>ManipulateWindow</string>
+									<key>Targeting</key>
+									<string>FrontWindow</string>
+									<key>Vertical</key>
+									<integer>589</integer>
+									<key>VerticalExpression</key>
+									<string>589</string>
+									<key>WindowIndex</key>
+									<integer>2</integer>
+									<key>WindowIndexExpression</key>
+									<string>2</string>
+									<key>WindowName</key>
+									<string></string>
+								</dict>
+								<dict>
+									<key>Action</key>
+									<string>ResizeWindowTo</string>
+									<key>Horizontal</key>
+									<integer>416</integer>
+									<key>HorizontalExpression</key>
+									<string>416</string>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>ManipulateWindow</string>
+									<key>Targeting</key>
+									<string>FrontWindow</string>
+									<key>Vertical</key>
+									<integer>533</integer>
+									<key>VerticalExpression</key>
+									<string>533</string>
+									<key>WindowIndex</key>
+									<integer>2</integer>
+									<key>WindowIndexExpression</key>
+									<string>2</string>
+									<key>WindowName</key>
+									<string></string>
+								</dict>
+							</array>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
-						</dict>
-						<dict>
-							<key>Action</key>
-							<string>MoveWindowTo</string>
-							<key>Horizontal</key>
-							<integer>1504</integer>
-							<key>HorizontalExpression</key>
-							<string>1504</string>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>ManipulateWindow</string>
-							<key>Targeting</key>
-							<string>FrontWindow</string>
-							<key>Vertical</key>
-							<integer>589</integer>
-							<key>VerticalExpression</key>
-							<string>589</string>
-							<key>WindowIndex</key>
-							<integer>2</integer>
-							<key>WindowIndexExpression</key>
-							<string>2</string>
-							<key>WindowName</key>
-							<string></string>
-						</dict>
-						<dict>
-							<key>Action</key>
-							<string>ResizeWindowTo</string>
-							<key>Horizontal</key>
-							<integer>416</integer>
-							<key>HorizontalExpression</key>
-							<string>416</string>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>ManipulateWindow</string>
-							<key>Targeting</key>
-							<string>FrontWindow</string>
-							<key>Vertical</key>
-							<integer>533</integer>
-							<key>VerticalExpression</key>
-							<string>533</string>
-							<key>WindowIndex</key>
-							<integer>2</integer>
-							<key>WindowIndexExpression</key>
-							<string>2</string>
-							<key>WindowName</key>
-							<string></string>
 						</dict>
 						<dict>
 							<key>AlreadyActivatedActionType</key>
@@ -943,43 +620,6 @@ The control flow is:
 							<string>ActivateApplication</string>
 							<key>ReopenWindows</key>
 							<true/>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
-						</dict>
-						<dict>
-							<key>Conditions</key>
-							<dict>
-								<key>ConditionList</key>
-								<array>
-									<dict>
-										<key>Application</key>
-										<dict>
-											<key>BundleIdentifier</key>
-											<string>com.skype.skype</string>
-											<key>Creator</key>
-											<integer>1397446992</integer>
-											<key>FileType</key>
-											<integer>1095782476</integer>
-											<key>Name</key>
-											<string>Skype.app</string>
-											<key>NewFile</key>
-											<string>/Applications/Skype.app</string>
-										</dict>
-										<key>ApplicationConditionType</key>
-										<string>Active</string>
-										<key>ConditionType</key>
-										<string>Application</string>
-									</dict>
-								</array>
-								<key>ConditionListMatch</key>
-								<string>All</string>
-							</dict>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>PauseUntil</string>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
 						</dict>
@@ -1114,38 +754,11 @@ The control flow is:
 							<key>WindowName</key>
 							<string></string>
 						</dict>
-						<dict>
-							<key>AlreadyActivatedActionType</key>
-							<string>Normal</string>
-							<key>Application</key>
-							<dict>
-								<key>BundleIdentifier</key>
-								<string>com.parallels.winapp.29cb4ac6cc4eed05606a67cd335a63e7.cf04fb11a2d045989305a73ea0d8d4c7</string>
-								<key>Creator</key>
-								<integer>1061109567</integer>
-								<key>FileType</key>
-								<integer>1095782476</integer>
-								<key>Name</key>
-								<string>TimeSheep.app</string>
-								<key>NewFile</key>
-								<string>/Users/akku/Applications (Parallels)/{cf04fb11-a2d0-4598-9305-a73ea0d8d4c7} Applications.localized/TimeSheep.app</string>
-							</dict>
-							<key>IsActive</key>
-							<false/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>ActivateApplication</string>
-							<key>ReopenWindows</key>
-							<false/>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
-						</dict>
 					</array>
 					<key>IsActive</key>
 					<true/>
 					<key>Name</key>
-					<string>Position with One Screen (Work)</string>
+					<string>Position Windows on One Screen @Work</string>
 					<key>Triggers</key>
 					<array/>
 					<key>UID</key>
@@ -1341,33 +954,6 @@ The control flow is:
 						</dict>
 						<dict>
 							<key>AlreadyActivatedActionType</key>
-							<string>Hide</string>
-							<key>Application</key>
-							<dict>
-								<key>BundleIdentifier</key>
-								<string>org.jitsi</string>
-								<key>Creator</key>
-								<integer>1936289891</integer>
-								<key>FileType</key>
-								<integer>1095782476</integer>
-								<key>Name</key>
-								<string>Jitsi.app</string>
-								<key>NewFile</key>
-								<string>/Applications/Jitsi.app</string>
-							</dict>
-							<key>IsActive</key>
-							<false/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>ActivateApplication</string>
-							<key>ReopenWindows</key>
-							<false/>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
-						</dict>
-						<dict>
-							<key>AlreadyActivatedActionType</key>
 							<string>Normal</string>
 							<key>Application</key>
 							<dict>
@@ -1528,7 +1114,7 @@ The control flow is:
 					<key>IsActive</key>
 					<true/>
 					<key>Name</key>
-					<string>Position with Two Screens (Home)</string>
+					<string>Position Windows on Two Screens @Home</string>
 					<key>Triggers</key>
 					<array/>
 					<key>UID</key>
@@ -1642,81 +1228,6 @@ The control flow is:
 							<string></string>
 						</dict>
 						<dict>
-							<key>Conditions</key>
-							<dict>
-								<key>ConditionList</key>
-								<array>
-									<dict>
-										<key>ConditionType</key>
-										<string>Variable</string>
-										<key>Variable</key>
-										<string>checkedOTRS</string>
-										<key>VariableConditionType</key>
-										<string>IsNot</string>
-										<key>VariableValue</key>
-										<string>1</string>
-									</dict>
-								</array>
-								<key>ConditionListMatch</key>
-								<string>All</string>
-							</dict>
-							<key>ElseActions</key>
-							<array/>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>IfThenElse</string>
-							<key>ThenActions</key>
-							<array>
-								<dict>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>SetVariableToText</string>
-									<key>Text</key>
-									<string>1</string>
-									<key>Variable</key>
-									<string>checkedOTRS</string>
-								</dict>
-								<dict>
-									<key>Application</key>
-									<dict/>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDefaultApplication</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>OpenURL</string>
-									<key>TimeOutAbortsMacro</key>
-									<true/>
-									<key>URL</key>
-									<string>http://abelssoft.de/otrs/index.pl</string>
-								</dict>
-								<dict>
-									<key>Action</key>
-									<string>DisplayBriefly</string>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>InsertText</string>
-									<key>Paste</key>
-									<false/>
-									<key>Text</key>
-									<string>You have not checked OTRS today</string>
-								</dict>
-							</array>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
-						</dict>
-						<dict>
 							<key>AlreadyActivatedActionType</key>
 							<string>Normal</string>
 							<key>Application</key>
@@ -1810,33 +1321,6 @@ The control flow is:
 							<string></string>
 						</dict>
 						<dict>
-							<key>AlreadyActivatedActionType</key>
-							<string>Normal</string>
-							<key>Application</key>
-							<dict>
-								<key>BundleIdentifier</key>
-								<string>com.tapbots.TweetbotMac</string>
-								<key>Creator</key>
-								<integer>1061109567</integer>
-								<key>FileType</key>
-								<integer>1095782476</integer>
-								<key>Name</key>
-								<string>Tweetbot.app</string>
-								<key>NewFile</key>
-								<string>/Applications/Tweetbot.app</string>
-							</dict>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>ActivateApplication</string>
-							<key>ReopenWindows</key>
-							<true/>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
-						</dict>
-						<dict>
 							<key>Conditions</key>
 							<dict>
 								<key>ConditionList</key>
@@ -1856,7 +1340,7 @@ The control flow is:
 											<string>/Applications/Tweetbot.app</string>
 										</dict>
 										<key>ApplicationConditionType</key>
-										<string>Active</string>
+										<string>Running</string>
 										<key>ConditionType</key>
 										<string>Application</string>
 									</dict>
@@ -1864,66 +1348,98 @@ The control flow is:
 								<key>ConditionListMatch</key>
 								<string>All</string>
 							</dict>
+							<key>ElseActions</key>
+							<array/>
 							<key>IsActive</key>
 							<true/>
 							<key>IsDisclosed</key>
 							<true/>
 							<key>MacroActionType</key>
-							<string>PauseUntil</string>
+							<string>IfThenElse</string>
+							<key>ThenActions</key>
+							<array>
+								<dict>
+									<key>AlreadyActivatedActionType</key>
+									<string>Normal</string>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.tapbots.TweetbotMac</string>
+										<key>Creator</key>
+										<integer>1061109567</integer>
+										<key>FileType</key>
+										<integer>1095782476</integer>
+										<key>Name</key>
+										<string>Tweetbot.app</string>
+										<key>NewFile</key>
+										<string>/Applications/Tweetbot.app</string>
+									</dict>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>ActivateApplication</string>
+									<key>ReopenWindows</key>
+									<true/>
+									<key>TimeOutAbortsMacro</key>
+									<true/>
+								</dict>
+								<dict>
+									<key>Action</key>
+									<string>MoveWindowTo</string>
+									<key>Horizontal</key>
+									<integer>1489</integer>
+									<key>HorizontalExpression</key>
+									<string>1489</string>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>ManipulateWindow</string>
+									<key>Targeting</key>
+									<string>FrontWindow</string>
+									<key>Vertical</key>
+									<integer>23</integer>
+									<key>VerticalExpression</key>
+									<string>23</string>
+									<key>WindowIndex</key>
+									<integer>2</integer>
+									<key>WindowIndexExpression</key>
+									<string>2</string>
+									<key>WindowName</key>
+									<string></string>
+								</dict>
+								<dict>
+									<key>Action</key>
+									<string>ResizeWindowTo</string>
+									<key>Horizontal</key>
+									<integer>430</integer>
+									<key>HorizontalExpression</key>
+									<string>430</string>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>ManipulateWindow</string>
+									<key>Targeting</key>
+									<string>FrontWindow</string>
+									<key>Vertical</key>
+									<integer>820</integer>
+									<key>VerticalExpression</key>
+									<string>820</string>
+									<key>WindowIndex</key>
+									<integer>2</integer>
+									<key>WindowIndexExpression</key>
+									<string>2</string>
+									<key>WindowName</key>
+									<string></string>
+								</dict>
+							</array>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
-						</dict>
-						<dict>
-							<key>Action</key>
-							<string>MoveWindowTo</string>
-							<key>Horizontal</key>
-							<integer>1489</integer>
-							<key>HorizontalExpression</key>
-							<string>1489</string>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>ManipulateWindow</string>
-							<key>Targeting</key>
-							<string>FrontWindow</string>
-							<key>Vertical</key>
-							<integer>23</integer>
-							<key>VerticalExpression</key>
-							<string>23</string>
-							<key>WindowIndex</key>
-							<integer>2</integer>
-							<key>WindowIndexExpression</key>
-							<string>2</string>
-							<key>WindowName</key>
-							<string></string>
-						</dict>
-						<dict>
-							<key>Action</key>
-							<string>ResizeWindowTo</string>
-							<key>Horizontal</key>
-							<integer>430</integer>
-							<key>HorizontalExpression</key>
-							<string>430</string>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>ManipulateWindow</string>
-							<key>Targeting</key>
-							<string>FrontWindow</string>
-							<key>Vertical</key>
-							<integer>820</integer>
-							<key>VerticalExpression</key>
-							<string>820</string>
-							<key>WindowIndex</key>
-							<integer>2</integer>
-							<key>WindowIndexExpression</key>
-							<string>2</string>
-							<key>WindowName</key>
-							<string></string>
 						</dict>
 						<dict>
 							<key>AlreadyActivatedActionType</key>
@@ -2032,43 +1548,6 @@ The control flow is:
 							<true/>
 						</dict>
 						<dict>
-							<key>Conditions</key>
-							<dict>
-								<key>ConditionList</key>
-								<array>
-									<dict>
-										<key>Application</key>
-										<dict>
-											<key>BundleIdentifier</key>
-											<string>com.skype.skype</string>
-											<key>Creator</key>
-											<integer>1397446992</integer>
-											<key>FileType</key>
-											<integer>1095782476</integer>
-											<key>Name</key>
-											<string>Skype.app</string>
-											<key>NewFile</key>
-											<string>/Applications/Skype.app</string>
-										</dict>
-										<key>ApplicationConditionType</key>
-										<string>Active</string>
-										<key>ConditionType</key>
-										<string>Application</string>
-									</dict>
-								</array>
-								<key>ConditionListMatch</key>
-								<string>All</string>
-							</dict>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>PauseUntil</string>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
-						</dict>
-						<dict>
 							<key>Action</key>
 							<string>MoveWindowTo</string>
 							<key>Horizontal</key>
@@ -2120,80 +1599,11 @@ The control flow is:
 							<key>WindowName</key>
 							<string></string>
 						</dict>
-						<dict>
-							<key>Conditions</key>
-							<dict>
-								<key>ConditionList</key>
-								<array>
-									<dict>
-										<key>Application</key>
-										<dict>
-											<key>BundleIdentifier</key>
-											<string>com.parallels.winapp.29cb4ac6cc4eed05606a67cd335a63e7.cf04fb11a2d045989305a73ea0d8d4c7</string>
-											<key>Creator</key>
-											<integer>1061109567</integer>
-											<key>FileType</key>
-											<integer>1095782476</integer>
-											<key>Name</key>
-											<string>TimeSheep.app</string>
-											<key>NewFile</key>
-											<string>/Users/akku/Applications (Parallels)/{cf04fb11-a2d0-4598-9305-a73ea0d8d4c7} Applications.localized/TimeSheep.app</string>
-										</dict>
-										<key>ApplicationConditionType</key>
-										<string>NotActive</string>
-										<key>ConditionType</key>
-										<string>Application</string>
-									</dict>
-								</array>
-								<key>ConditionListMatch</key>
-								<string>All</string>
-							</dict>
-							<key>ElseActions</key>
-							<array/>
-							<key>IsActive</key>
-							<false/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>IfThenElse</string>
-							<key>ThenActions</key>
-							<array>
-								<dict>
-									<key>AlreadyActivatedActionType</key>
-									<string>Normal</string>
-									<key>Application</key>
-									<dict>
-										<key>BundleIdentifier</key>
-										<string>com.parallels.winapp.29cb4ac6cc4eed05606a67cd335a63e7.cf04fb11a2d045989305a73ea0d8d4c7</string>
-										<key>Creator</key>
-										<integer>1061109567</integer>
-										<key>FileType</key>
-										<integer>1095782476</integer>
-										<key>Name</key>
-										<string>TimeSheep.app</string>
-										<key>NewFile</key>
-										<string>/Users/akku/Applications (Parallels)/{cf04fb11-a2d0-4598-9305-a73ea0d8d4c7} Applications.localized/TimeSheep.app</string>
-									</dict>
-									<key>IsActive</key>
-									<true/>
-									<key>IsDisclosed</key>
-									<true/>
-									<key>MacroActionType</key>
-									<string>ActivateApplication</string>
-									<key>ReopenWindows</key>
-									<true/>
-									<key>TimeOutAbortsMacro</key>
-									<true/>
-								</dict>
-							</array>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
-						</dict>
 					</array>
 					<key>IsActive</key>
 					<true/>
 					<key>Name</key>
-					<string>Position with Two Screens (Work)</string>
+					<string>Position Windows on Two Screens @Work</string>
 					<key>Triggers</key>
 					<array/>
 					<key>UID</key>
@@ -2221,15 +1631,80 @@ The control flow is:
 							<key>IsDisclosed</key>
 							<true/>
 							<key>MacroActionType</key>
-							<string>SetVariableToText</string>
+							<string>Comment</string>
 							<key>Text</key>
-							<string>%Screen%2%</string>
-							<key>Variable</key>
-							<string>secondframe</string>
+							<string>Author: Tim Dellas
+http://www.ithoughts.de
+@ObjT on Twitter
+
+Description:
+Quit work-only applications when I just arrived at home, then find out how many monitors are attached and call the appropriate marco for the screen-layout.
+</string>
+							<key>Title</key>
+							<string>About</string>
 						</dict>
 						<dict>
-							<key>AlreadyActivatedActionType</key>
-							<string>Hide</string>
+							<key>Conditions</key>
+							<dict>
+								<key>ConditionList</key>
+								<array>
+									<dict>
+										<key>ConditionType</key>
+										<string>Variable</string>
+										<key>Variable</key>
+										<string>justArrivedAtHome</string>
+										<key>VariableConditionType</key>
+										<string>Is</string>
+										<key>VariableValue</key>
+										<string>1</string>
+									</dict>
+								</array>
+								<key>ConditionListMatch</key>
+								<string>All</string>
+							</dict>
+							<key>ElseActions</key>
+							<array/>
+							<key>IsActive</key>
+							<true/>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>IfThenElse</string>
+							<key>ThenActions</key>
+							<array>
+								<dict>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>SetVariableToText</string>
+									<key>Text</key>
+									<string>0</string>
+									<key>Variable</key>
+									<string>justArrivedAtHome</string>
+								</dict>
+								<dict>
+									<key>Action</key>
+									<string>DisplayBriefly</string>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>InsertText</string>
+									<key>Paste</key>
+									<false/>
+									<key>Text</key>
+									<string>You just arrived at home, congratulations!</string>
+								</dict>
+							</array>
+							<key>TimeOutAbortsMacro</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>Action</key>
+							<string>Quit</string>
 							<key>Application</key>
 							<dict>
 								<key>BundleIdentifier</key>
@@ -2248,11 +1723,307 @@ The control flow is:
 							<key>IsDisclosed</key>
 							<true/>
 							<key>MacroActionType</key>
-							<string>ActivateApplication</string>
-							<key>ReopenWindows</key>
-							<false/>
+							<string>QuitSpecificApp</string>
+							<key>Target</key>
+							<string>Specific</string>
+						</dict>
+						<dict>
+							<key>Action</key>
+							<string>Quit</string>
+							<key>Application</key>
+							<dict>
+								<key>BundleIdentifier</key>
+								<string>com.skype.skype</string>
+								<key>Creator</key>
+								<integer>1397446992</integer>
+								<key>FileType</key>
+								<integer>1095782476</integer>
+								<key>Name</key>
+								<string>Skype.app</string>
+								<key>NewFile</key>
+								<string>/Applications/Skype.app</string>
+							</dict>
+							<key>IsActive</key>
+							<true/>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>QuitSpecificApp</string>
+							<key>Target</key>
+							<string>Specific</string>
+						</dict>
+						<dict>
+							<key>IsActive</key>
+							<true/>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>SetVariableToText</string>
+							<key>Text</key>
+							<string>%Screen%2%</string>
+							<key>Variable</key>
+							<string>secondframe</string>
+						</dict>
+						<dict>
+							<key>Conditions</key>
+							<dict>
+								<key>ConditionList</key>
+								<array>
+									<dict>
+										<key>ConditionType</key>
+										<string>Variable</string>
+										<key>Variable</key>
+										<string>secondframe</string>
+										<key>VariableConditionType</key>
+										<string>Is</string>
+										<key>VariableValue</key>
+										<string>0,0,1920,1200</string>
+									</dict>
+								</array>
+								<key>ConditionListMatch</key>
+								<string>All</string>
+							</dict>
+							<key>ElseActions</key>
+							<array>
+								<dict>
+									<key>Count</key>
+									<integer>1</integer>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>ExecuteMacro</string>
+									<key>MacroUID</key>
+									<string>91070407-4E6A-42A5-8BAD-DD34E21C73D3</string>
+									<key>TimeOutAbortsMacro</key>
+									<true/>
+								</dict>
+							</array>
+							<key>IsActive</key>
+							<true/>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>IfThenElse</string>
+							<key>ThenActions</key>
+							<array>
+								<dict>
+									<key>Count</key>
+									<integer>1</integer>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>ExecuteMacro</string>
+									<key>MacroUID</key>
+									<string>5412DF3C-0D6B-4E6A-90FA-8C08C1E71D05</string>
+									<key>TimeOutAbortsMacro</key>
+									<true/>
+								</dict>
+							</array>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
+						</dict>
+					</array>
+					<key>IsActive</key>
+					<true/>
+					<key>Name</key>
+					<string>Setup basic Home Layout</string>
+					<key>Triggers</key>
+					<array/>
+					<key>UID</key>
+					<string>2FCBDEBF-62C1-45D8-9D3C-1478021249C6</string>
+				</dict>
+			</array>
+			<key>Name</key>
+			<string>Screen Positioning</string>
+			<key>UID</key>
+			<string>C591C8C0-CF5A-4C5E-B318-A5BD7DE6CF50</string>
+		</dict>
+		<dict>
+			<key>Activate</key>
+			<string>Normal</string>
+			<key>IsActive</key>
+			<true/>
+			<key>Macros</key>
+			<array>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>IsActive</key>
+							<true/>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>Comment</string>
+							<key>Text</key>
+							<string>Author: Tim Dellas
+http://www.ithoughts.de
+@ObjT on Twitter
+
+Description:
+Quit home-only applications when I just arrived at work, start work-only apps, then find out how many monitors are attached and call the appropriate marco for the screen-layout.
+</string>
+							<key>Title</key>
+							<string>About</string>
+						</dict>
+						<dict>
+							<key>Conditions</key>
+							<dict>
+								<key>ConditionList</key>
+								<array>
+									<dict>
+										<key>ConditionType</key>
+										<string>Variable</string>
+										<key>Variable</key>
+										<string>justArrivedAtWork</string>
+										<key>VariableConditionType</key>
+										<string>Is</string>
+										<key>VariableValue</key>
+										<string>1</string>
+									</dict>
+								</array>
+								<key>ConditionListMatch</key>
+								<string>All</string>
+							</dict>
+							<key>ElseActions</key>
+							<array/>
+							<key>IsActive</key>
+							<true/>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>IfThenElse</string>
+							<key>ThenActions</key>
+							<array>
+								<dict>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>SetVariableToText</string>
+									<key>Text</key>
+									<string>0</string>
+									<key>Variable</key>
+									<string>justArrivedAtWork</string>
+								</dict>
+								<dict>
+									<key>AlreadyActivatedActionType</key>
+									<string>Hide</string>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.appuous.keycard</string>
+										<key>Creator</key>
+										<integer>1061109567</integer>
+										<key>FileType</key>
+										<integer>1095782476</integer>
+										<key>Name</key>
+										<string>Keycard.app</string>
+										<key>NewFile</key>
+										<string>/Applications/Keycard.app</string>
+									</dict>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>ActivateApplication</string>
+									<key>ReopenWindows</key>
+									<false/>
+									<key>TimeOutAbortsMacro</key>
+									<true/>
+								</dict>
+								<dict>
+									<key>Action</key>
+									<string>Quit</string>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.tapbots.TweetbotMac</string>
+										<key>Creator</key>
+										<integer>1061109567</integer>
+										<key>FileType</key>
+										<integer>1095782476</integer>
+										<key>Name</key>
+										<string>Tweetbot.app</string>
+										<key>NewFile</key>
+										<string>/Applications/Tweetbot.app</string>
+									</dict>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>QuitSpecificApp</string>
+									<key>Target</key>
+									<string>Specific</string>
+								</dict>
+								<dict>
+									<key>Application</key>
+									<dict/>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDefaultApplication</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>OpenURL</string>
+									<key>TimeOutAbortsMacro</key>
+									<true/>
+									<key>URL</key>
+									<string>http://abelssoft.de/otrs/index.pl</string>
+								</dict>
+								<dict>
+									<key>Action</key>
+									<string>DisplayBriefly</string>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>InsertText</string>
+									<key>Paste</key>
+									<false/>
+									<key>Text</key>
+									<string>You just arrived at work, opening the support interface
+
+--&gt; type your 1Password password</string>
+								</dict>
+								<dict>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>KeyCode</key>
+									<integer>42</integer>
+									<key>MacroActionType</key>
+									<string>SimulateKeystroke</string>
+									<key>Modifiers</key>
+									<integer>256</integer>
+									<key>ReleaseAll</key>
+									<false/>
+								</dict>
+							</array>
+							<key>TimeOutAbortsMacro</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>IsActive</key>
+							<true/>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>SetVariableToText</string>
+							<key>Text</key>
+							<string>%Screen%2%</string>
+							<key>Variable</key>
+							<string>secondframe</string>
 						</dict>
 						<dict>
 							<key>Conditions</key>
@@ -2320,22 +2091,9 @@ The control flow is:
 					<key>IsActive</key>
 					<true/>
 					<key>Name</key>
-					<string>Position (Work)</string>
+					<string>Setup basic Work Layout</string>
 					<key>Triggers</key>
-					<array>
-						<dict>
-							<key>FireType</key>
-							<string>Pressed</string>
-							<key>KeyCode</key>
-							<integer>21</integer>
-							<key>MacroTriggerType</key>
-							<string>HotKey</string>
-							<key>Modifiers</key>
-							<integer>6400</integer>
-							<key>TriggerRepeat</key>
-							<false/>
-						</dict>
-					</array>
+					<array/>
 					<key>UID</key>
 					<string>37298841-4401-4403-9B03-97AACBB4852B</string>
 				</dict>
@@ -2356,6 +2114,24 @@ The control flow is:
 					<key>Actions</key>
 					<array>
 						<dict>
+							<key>IsActive</key>
+							<true/>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>Comment</string>
+							<key>Text</key>
+							<string>Author: Tim Dellas
+http://www.ithoughts.de
+@ObjT on Twitter
+
+Description:
+
+When you want to find a perfect screen layout, you can arrange all your windows in the way you want them. Then you can use this marco via a hotkey to let a Window appear that shows the position and size of the window, so you can put the info in the respective macro where you want to position and size the window.</string>
+							<key>Title</key>
+							<string>About</string>
+						</dict>
+						<dict>
 							<key>Action</key>
 							<string>DisplayWindow</string>
 							<key>IsActive</key>
@@ -2367,16 +2143,17 @@ The control flow is:
 							<key>Paste</key>
 							<false/>
 							<key>Text</key>
-							<string>Pos: %WindowPosition%1%
-Size: %WindowSize%1%
+							<string>Header: "%WindowName%1%"
 
-Header: "%WindowName%1%"</string>
+Pos: %WindowPosition%1%
+
+Size: %WindowSize%1%</string>
 						</dict>
 					</array>
 					<key>IsActive</key>
 					<true/>
 					<key>Name</key>
-					<string>Print Screen Variables</string>
+					<string>__Helper__ Print Screen Variables</string>
 					<key>Triggers</key>
 					<array>
 						<dict>
@@ -2411,6 +2188,30 @@ Header: "%WindowName%1%"</string>
 				<dict>
 					<key>Actions</key>
 					<array>
+						<dict>
+							<key>IsActive</key>
+							<true/>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>Comment</string>
+							<key>Text</key>
+							<string>Author: Tim Dellas
+http://www.ithoughts.de
+@ObjT on Twitter
+
+Description:
+At System Wake (or a hotkey):
+
+1. wait until a known Network is found (at home I have iShodanHive and ShodanHive; at work it's AscoraKabel; replace accordingly)
+
+2. check if the location has *changed*, and set flags appropriately (I arrived a work or home)
+
+3. When I'm at work, call Setup basic Work layout, 
+else call Setup basic Home layout</string>
+							<key>Title</key>
+							<string>About</string>
+						</dict>
 						<dict>
 							<key>IsActive</key>
 							<true/>
@@ -2473,13 +2274,23 @@ Header: "%WindowName%1%"</string>
 										<key>Variable</key>
 										<string>NetworkSSID</string>
 										<key>VariableConditionType</key>
-										<string>IsNotEmpty</string>
+										<string>Is</string>
 										<key>VariableValue</key>
-										<string>value</string>
+										<string>AscoraKabel</string>
+									</dict>
+									<dict>
+										<key>ConditionType</key>
+										<string>Variable</string>
+										<key>Variable</key>
+										<string>NetworkSSID</string>
+										<key>VariableConditionType</key>
+										<string>Contains</string>
+										<key>VariableValue</key>
+										<string>ShodanHive</string>
 									</dict>
 								</array>
 								<key>ConditionListMatch</key>
-								<string>All</string>
+								<string>Any</string>
 							</dict>
 							<key>IsActive</key>
 							<true/>
@@ -2489,20 +2300,6 @@ Header: "%WindowName%1%"</string>
 							<string>Until</string>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
-						</dict>
-						<dict>
-							<key>Action</key>
-							<string>DisplayBriefly</string>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>InsertText</string>
-							<key>Paste</key>
-							<false/>
-							<key>Text</key>
-							<string>Found %Variable%NetworkSSID%</string>
 						</dict>
 						<dict>
 							<key>Conditions</key>
@@ -2545,7 +2342,10 @@ Header: "%WindowName%1%"</string>
 									<key>Paste</key>
 									<false/>
 									<key>Text</key>
-									<string>Network location change detected, resetting flags</string>
+									<string>Found %Variable%NetworkSSID% ...
+
+Network location change detected, resetting flags.
+</string>
 								</dict>
 								<dict>
 									<key>Conditions</key>
@@ -2567,7 +2367,32 @@ Header: "%WindowName%1%"</string>
 										<string>All</string>
 									</dict>
 									<key>ElseActions</key>
-									<array/>
+									<array>
+										<dict>
+											<key>IsActive</key>
+											<true/>
+											<key>IsDisclosed</key>
+											<true/>
+											<key>MacroActionType</key>
+											<string>SetVariableToText</string>
+											<key>Text</key>
+											<string>1</string>
+											<key>Variable</key>
+											<string>justArrivedAtHome</string>
+										</dict>
+										<dict>
+											<key>IsActive</key>
+											<true/>
+											<key>IsDisclosed</key>
+											<true/>
+											<key>MacroActionType</key>
+											<string>SetVariableToText</string>
+											<key>Text</key>
+											<string>0</string>
+											<key>Variable</key>
+											<string>justArrivedAtWork</string>
+										</dict>
+									</array>
 									<key>IsActive</key>
 									<true/>
 									<key>IsDisclosed</key>
@@ -2584,9 +2409,21 @@ Header: "%WindowName%1%"</string>
 											<key>MacroActionType</key>
 											<string>SetVariableToText</string>
 											<key>Text</key>
-											<string></string>
+											<string>1</string>
 											<key>Variable</key>
-											<string>checkedOTRS</string>
+											<string>justArrivedAtWork</string>
+										</dict>
+										<dict>
+											<key>IsActive</key>
+											<true/>
+											<key>IsDisclosed</key>
+											<true/>
+											<key>MacroActionType</key>
+											<string>SetVariableToText</string>
+											<key>Text</key>
+											<string>0</string>
+											<key>Variable</key>
+											<string>justArrivedAtHome</string>
 										</dict>
 									</array>
 									<key>TimeOutAbortsMacro</key>
@@ -2674,13 +2511,9 @@ Header: "%WindowName%1%"</string>
 					<key>IsActive</key>
 					<true/>
 					<key>Name</key>
-					<string>Configure Workspace</string>
+					<string>Choose basic screen setup based on SSID</string>
 					<key>Triggers</key>
 					<array>
-						<dict>
-							<key>MacroTriggerType</key>
-							<string>Wake</string>
-						</dict>
 						<dict>
 							<key>FireType</key>
 							<string>Pressed</string>
@@ -2692,6 +2525,10 @@ Header: "%WindowName%1%"</string>
 							<integer>256</integer>
 							<key>TriggerRepeat</key>
 							<false/>
+						</dict>
+						<dict>
+							<key>MacroTriggerType</key>
+							<string>Wake</string>
 						</dict>
 					</array>
 					<key>UID</key>
@@ -2772,6 +2609,18 @@ Last time: %Variable%secondScreenLastTime%
 Now: %Screen%2%</string>
 								</dict>
 								<dict>
+									<key>IsActive</key>
+									<true/>
+									<key>IsDisclosed</key>
+									<true/>
+									<key>MacroActionType</key>
+									<string>SetVariableToText</string>
+									<key>Text</key>
+									<string>%Screen%2%</string>
+									<key>Variable</key>
+									<string>secondScreenLastTime</string>
+								</dict>
+								<dict>
 									<key>Count</key>
 									<integer>1</integer>
 									<key>IsActive</key>
@@ -2789,23 +2638,11 @@ Now: %Screen%2%</string>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
 						</dict>
-						<dict>
-							<key>IsActive</key>
-							<true/>
-							<key>IsDisclosed</key>
-							<true/>
-							<key>MacroActionType</key>
-							<string>SetVariableToText</string>
-							<key>Text</key>
-							<string>%Screen%2%</string>
-							<key>Variable</key>
-							<string>secondScreenLastTime</string>
-						</dict>
 					</array>
 					<key>IsActive</key>
 					<true/>
 					<key>Name</key>
-					<string>ScreenChange</string>
+					<string>if (Detect ScreenChange) --&gt; relayout</string>
 					<key>Triggers</key>
 					<array>
 						<dict>
@@ -2840,6 +2677,6 @@ Now: %Screen%2%</string>
 		</dict>
 	</array>
 	<key>UID</key>
-	<string>C20E02D9-E598-4EDD-BEC8-F898F7393ECB</string>
+	<string>0902B2CD-EF8F-487F-9AC4-54BCCCB36591</string>
 </dict>
 </plist>
